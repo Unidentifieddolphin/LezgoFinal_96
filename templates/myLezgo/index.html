@@ -1,0 +1,28 @@
+{% extends 'myLezgo/base.html' %}
+{% load static %}
+
+{% block content %}
+
+	<div class="home">
+		<div class="container">
+			<div class="text">A
+				<img src="{% static 'myLezgo/images/logo2.png' %}" alt="img">
+				<h1>-   №1 auto rent</h1>
+			</div>
+			<div class="map">
+				<img src="{% static 'myLezgo/images/circle.png' %}" alt="img">
+				<p>Fill the forms</p>
+				<img src="{% static 'myLezgo/images/arrow.png' %}" alt="img">
+				<p>Choose the transport</p>
+				<img src="{% static 'myLezgo/images/arrow.png' %}" alt="img">
+				<p>Add your wishes</p>
+				<img src="{% static 'myLezgo/images/arrow.png' %}" alt="img">
+				<p>Enjoy</p>
+			</div>
+			<div class="button">
+				<a href="{% url 'order' %}">start</a>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

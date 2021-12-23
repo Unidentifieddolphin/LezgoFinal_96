@@ -1,0 +1,48 @@
+{% extends 'myLezgo/base.html' %}
+{% load static %}
+
+{% block content %}
+	<div class="wrapper">
+		<div class="container">
+			<div class="signup">
+				<h1>Sign up</h1>
+				<h5>Already have an account? Then please <a href="{% url 'sign_in' %}">sign in</a>.</h5>
+			</div>
+			<form action="" method="post" class="form">
+                {% csrf_token %}
+				<div class="form-row">
+					<div class="form-group col-md-6">
+                        {{ form.username.label }}
+                        <br>
+                        {{ form.username }}
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+                        {{ form.email.label }}
+                        <br>
+                        {{ form.email }}
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+                        {{ form.password1.label }}
+                        <br>
+                        {{ form.password1 }}
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+                        {{ form.password2.label }}
+                        <br>
+                        {{ form.password2 }}
+					</div>
+				</div>
+				<br>
+                {{ form.errors }}
+                <br>
+				<button type="submit" class="btn btn-primary">Sign up</button>
+			</form>
+		</div>
+	</div>
+{% endblock %}

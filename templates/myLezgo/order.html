@@ -1,0 +1,169 @@
+{% extends 'myLezgo/base.html' %}
+{% load static %}
+
+{% block content %}
+
+{#username: dias pass: diastestpass#}
+
+    <form method="POST">
+    {% csrf_token %}
+        <div class="bigdiv" id="location">
+            <div class="body">
+                <div class="slider1">
+                    <div class="container">
+                        <div class="location">
+                            <h1>Location</h1>
+                            <div class="namesurname">
+                                <input type="text" name="name" placeholder="Your name" required="required">
+                                <input type="text" name="surname" placeholder="Your surname" required="required">
+                            </div>
+                            <div class="form">
+                                <input type="tel" name="phone_number" placeholder="+7 (000) 000-00-00" required="required">
+                            </div>
+                            <select name="city" required="required">
+                                <option value="" disabled selected>Choose your city</option>
+                                <option value="Almaty">Almaty</option>
+                                <option value="Nur-Sultan">Nur-Sultan</option>
+                                <option value="Rome">Rome</option>
+                                <option value="Abu Dhabi">Abu Dhabi</option>
+                                <option value="Tashkent">Tashkent</option>
+                                <option value="Istanbul">Istanbul</option>
+                                <option value="Moscow">Moscow</option>
+                                <option value="Vienna">Vienna</option>
+                                <option value="Berlin">Berlin</option>
+                                <option value="Hamburg">Hamburg</option>
+                                <option value="Stockholm">Stockholm</option>
+                                <option value="Warsaw">Warsaw</option>
+                            </select>
+                            <iframe id="map_835561926" frameborder="0" width="700px" height="500px" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe><script type="text/javascript">(function(e,t){var r=document.getElementById(e);r.contentWindow.document.open(),r.contentWindow.document.write(atob(t)),r.contentWindow.document.close()})("map_835561926", "PGJvZHk+PHN0eWxlPgogICAgICAgIGh0bWwsIGJvZHkgewogICAgICAgICAgICBtYXJnaW46IDA7CiAgICAgICAgICAgIHBhZGRpbmc6IDA7CiAgICAgICAgfQogICAgICAgIGh0bWwsIGJvZHksICNtYXAgewogICAgICAgICAgICB3aWR0aDogMTAwJTsKICAgICAgICAgICAgaGVpZ2h0OiAxMDAlOwogICAgICAgIH0KICAgICAgICAuYnVsbGV0LW1hcmtlciB7CiAgICAgICAgICAgIHdpZHRoOiAyMHB4OwogICAgICAgICAgICBoZWlnaHQ6IDIwcHg7CiAgICAgICAgICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7CiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmY7CiAgICAgICAgICAgIGJveC1zaGFkb3c6IDAgMXB4IDNweCAwIHJnYmEoMCwgMCwgMCwgMC4yKTsKICAgICAgICAgICAgYm9yZGVyOiA0cHggc29saWQgIzAyODFmMjsKICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogNTAlOwogICAgICAgIH0KICAgICAgICAucGVybWFuZW50LXRvb2x0aXAgewogICAgICAgICAgICBiYWNrZ3JvdW5kOiBub25lOwogICAgICAgICAgICBib3gtc2hhZG93OiBub25lOwogICAgICAgICAgICBib3JkZXI6IG5vbmU7CiAgICAgICAgICAgIHBhZGRpbmc6IDZweCAxMnB4OwogICAgICAgICAgICBjb2xvcjogIzI2MjYyNjsKICAgICAgICB9CiAgICAgICAgLnBlcm1hbmVudC10b29sdGlwOmJlZm9yZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IG5vbmU7CiAgICAgICAgfQogICAgICAgIC5kZy1wb3B1cF9oaWRkZW5fdHJ1ZSB7CiAgICAgICAgICAgIGRpc3BsYXk6IGJsb2NrOwogICAgICAgIH0KICAgICAgICAubGVhZmxldC1jb250YWluZXIgLmxlYWZsZXQtcG9wdXAgLmxlYWZsZXQtcG9wdXAtY2xvc2UtYnV0dG9uIHsKICAgICAgICAgICAgdG9wOiAwOwogICAgICAgICAgICByaWdodDogMDsKICAgICAgICAgICAgd2lkdGg6IDIwcHg7CiAgICAgICAgICAgIGhlaWdodDogMjBweDsKICAgICAgICAgICAgZm9udC1zaXplOiAyMHB4OwogICAgICAgICAgICBsaW5lLWhlaWdodDogMTsKICAgICAgICB9CiAgICA8L3N0eWxlPjxkaXYgaWQ9Im1hcCI+PC9kaXY+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0iaHR0cHM6Ly9tYXBzLmFwaS4yZ2lzLnJ1LzIuMC9sb2FkZXIuanM/cGtnPWZ1bGwmYW1wO3NraW49bGlnaHQiPjwvc2NyaXB0PjxzY3JpcHQ+KGZ1bmN0aW9uKGUsdCl7dmFyIHI9SlNPTi5wYXJzZShlKSxuPUpTT04ucGFyc2UodCk7ZnVuY3Rpb24gYShlKXtyZXR1cm4gZGVjb2RlVVJJQ29tcG9uZW50KGF0b2IoZSkuc3BsaXQoIiIpLm1hcChmdW5jdGlvbihlKXtyZXR1cm4iJSIrKCIwMCIrZS5jaGFyQ29kZUF0KDApLnRvU3RyaW5nKDE2KSkuc2xpY2UoLTIpfSkuam9pbigiIikpfURHLnRoZW4oZnVuY3Rpb24oKXt2YXIgZT1ERy5tYXAoIm1hcCIse2NlbnRlcjpbbi5sYXQsbi5sb25dLHpvb206bi56b29tfSk7REcuZ2VvSlNPTihyLHtzdHlsZTpmdW5jdGlvbihlKXt2YXIgdCxyLG4sYSxvO3JldHVybntmaWxsQ29sb3I6bnVsbD09PSh0PWUpfHx2b2lkIDA9PT10P3ZvaWQgMDp0LnByb3BlcnRpZXMuZmlsbENvbG9yLGZpbGxPcGFjaXR5Om51bGw9PT0ocj1lKXx8dm9pZCAwPT09cj92b2lkIDA6ci5wcm9wZXJ0aWVzLmZpbGxPcGFjaXR5LGNvbG9yOm51bGw9PT0obj1lKXx8dm9pZCAwPT09bj92b2lkIDA6bi5wcm9wZXJ0aWVzLnN0cm9rZUNvbG9yLHdlaWdodDpudWxsPT09KGE9ZSl8fHZvaWQgMD09PWE/dm9pZCAwOmEucHJvcGVydGllcy5zdHJva2VXaWR0aCxvcGFjaXR5Om51bGw9PT0obz1lKXx8dm9pZCAwPT09bz92b2lkIDA6by5wcm9wZXJ0aWVzLnN0cm9rZU9wYWNpdHl9fSxwb2ludFRvTGF5ZXI6ZnVuY3Rpb24oZSx0KXtyZXR1cm4icmFkaXVzImluIGUucHJvcGVydGllcz9ERy5jaXJjbGUodCxlLnByb3BlcnRpZXMucmFkaXVzKTpERy5tYXJrZXIodCx7aWNvbjpmdW5jdGlvbihlKXtyZXR1cm4gREcuZGl2SWNvbih7aHRtbDoiPGRpdiBjbGFzcz0nYnVsbGV0LW1hcmtlcicgc3R5bGU9J2JvcmRlci1jb2xvcjogIitlKyI7Jz48L2Rpdj4iLGNsYXNzTmFtZToib3ZlcnJpZGUtZGVmYXVsdCIsaWNvblNpemU6WzIwLDIwXSxpY29uQW5jaG9yOlsxMCwxMF19KX0oZS5wcm9wZXJ0aWVzLmNvbG9yKX0pfSxvbkVhY2hGZWF0dXJlOmZ1bmN0aW9uKGUsdCl7ZS5wcm9wZXJ0aWVzLmRlc2NyaXB0aW9uJiZ0LmJpbmRQb3B1cChhKGUucHJvcGVydGllcy5kZXNjcmlwdGlvbikse2Nsb3NlQnV0dG9uOiEwLGNsb3NlT25Fc2NhcGVLZXk6ITB9KSxlLnByb3BlcnRpZXMudGl0bGUmJnQuYmluZFRvb2x0aXAoYShlLnByb3BlcnRpZXMudGl0bGUpLHtwZXJtYW5lbnQ6ITAsb3BhY2l0eToxLGNsYXNzTmFtZToicGVybWFuZW50LXRvb2x0aXAifSl9fSkuYWRkVG8oZSl9KX0pKCdbeyJ0eXBlIjoiRmVhdHVyZSIsInByb3BlcnRpZXMiOnsiY29sb3IiOiIjMDI4MWYyIiwidGl0bGUiOiIiLCJkZXNjcmlwdGlvbiI6IiIsInpJbmRleCI6MTAwMDAwMDAwMH0sImdlb21ldHJ5Ijp7InR5cGUiOiJQb2ludCIsImNvb3JkaW5hdGVzIjpbNzYuOTA5OTUsNDMuMjM1MDkyXX0sImlkIjozMTM2fV0nLCd7ImxhdCI6NDMuMjM1MjM3NTQyMTM1NjUsImxvbiI6NzYuOTEwNjE2MTU5NDM5MSwiem9vbSI6MTd9Jyk8L3NjcmlwdD48c2NyaXB0IGFzeW5jPSIiIHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbS9ndGFnL2pzP2lkPVVBLTE1ODg2NjE2OC0xIj48L3NjcmlwdD48c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+KGZ1bmN0aW9uKGUpe2Z1bmN0aW9uIHQoKXtkYXRhTGF5ZXIucHVzaChhcmd1bWVudHMpfXdpbmRvdy5kYXRhTGF5ZXI9d2luZG93LmRhdGFMYXllcnx8W10sdCgianMiLG5ldyBEYXRlKSx0KCJjb25maWciLGUpLHdpbmRvdy5ndGFnPXR9KSgnVUEtMTU4ODY2MTY4LTEnKTwvc2NyaXB0PjwvYm9keT4=")</script>
+                            <div class="button">
+                                <a href="#rent">next</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- LOCATION SECTION END -->
+
+
+        <div class="rent" id="rent">
+            <div class="bigdiv" id="location">
+                <div class="slider1">
+                    <div class="container">
+                        <div class="transport">
+                            <h1>Transport model</h1>
+                            <div class="selecttype">
+                                {% for car in car_list.all %}
+                                    <div class="card form_images">
+                                        <a href="{{ car.get_absolute_url }}" class="imagesForm">
+                                            <img src="{{ car.image.url }}">
+                                            <h4>{{ car.name }}</h4>
+                                        </a>
+                                        <hr>
+                                        <div class="daypay">
+                                            <div class="daypayleft">
+                                                {% for ra in car.rate.all %}
+                                                    <p><{{ ra.day }} days</p>
+                                                {% endfor %}
+                                            </div>
+                                            <div class="daypayright">
+                                                {% for ra in car.rate.all %}
+                                                    <p>{{ ra.price }}$ per day</p>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                        <div class="daypay">
+                                            <div class="daypayleft">
+                                                <img src="{% static 'myLezgo/images/seat.png' %}">
+                                                <img src="{% static 'myLezgo/images/maxsp.png' %}">
+                                                <img src="{% static 'myLezgo/images/hp.png' %}">
+                                                <img src="{% static 'myLezgo/images/wd.png' %}">
+                                                <img src="{% static 'myLezgo/images/calendar.png' %}">
+                                            </div>
+                                            <div class="daypayright">
+                                                <p>{{ car.place }}</p>
+                                                <p>{{ car.max_speed }}km/h</p>
+                                                <p>{{ car.hp }}hp</p>
+                                                <p>{{ car.drive_unit }}</p>
+                                                <p>{{ car.year }}</p>
+                                            </div>
+                                        </div>
+                                        <input class="checkbox-tools" type="radio" name="cars" value={{ car.id }} id="{{ car.id }}">
+                                        <label class="for-checkbox-tools buttontake" for="{{ car.id }}">
+                                            Select this
+                                        </label>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- RENT SECTION END -->
+
+        <!-- PAYMENT SECTION START -->
+        <div class="bigdiv" id="payment">
+            <div class="body2">
+                <div class="slider1">
+                    <div class="container">
+{#                        <div class="payment">#}
+{#                            <h1>PAYMENT</h1>#}
+{#                            <div class="form">#}
+{#                                <input type="" name="" placeholder="0000 0000 0000 0000">#}
+{#                                <input type="name" name="" placeholder="ILYAS ILYASOV">#}
+{#                                <input type="month" name="" placeholder="11/22">#}
+{#                                <input type="" name="" placeholder="CVV">#}
+{#                            </div>#}
+{#                        </div>#}
+                        <div class="wishes" id="feedback">
+                            <h1>WISHES</h1>
+                            <div class="control-group">
+                                <label class="control control-checkbox">
+                                    Full fuel ~300km+
+                                    <input type="checkbox" disabled="disabled" checked="checked" name="fuel"/>
+                                    <div class="control_indicator"></div>
+                                </label>
+                                <label class="control control-checkbox">
+                                    Water 0,5x2
+                                    <input type="checkbox" name="water"/>
+                                    <div class="control_indicator"></div>
+                                </label>
+                                <label class="control control-checkbox">
+                                    Driver
+                                    <input type="checkbox" name="driver" value="off"/>
+                                    <div class="control_indicator"></div>
+                                </label>
+                                <label class="control control-checkbox">
+                                    Trip out of town
+                                    <input type="checkbox" name="trip"/>
+                                    <div class="control_indicator"></div>
+                                </label>
+                                <label class="control control-checkbox">
+                                    Sweets
+                                    <input type="checkbox" name="sweets"/>
+                                    <div class="control_indicator"></div>
+                                </label>
+                            </div>
+                            <div class="wishestxt">
+                                <p><textarea placeholder="Add something..." name="comment"></textarea></p>
+                            </div>
+                            <div class="button">
+                                {% if user.is_authenticated %}
+                                    <button type="submit" class="sub_button" >Order</button>
+                                {% else %}
+                                    <a href="{% url 'sign_in' %}">Order</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}

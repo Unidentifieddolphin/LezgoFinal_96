@@ -1,0 +1,129 @@
+{% extends 'myLezgo/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="home">
+        <div class="container">
+            <div class="faq">
+                <h1>Support</h1>
+
+                <h2>FAQ</h2>
+
+                <h4>How to make an order?</h4>
+                <p>To make an order you should go home page and press START button, or press ORDER button at navbar.
+                    Or you can call us by phone number at the bottom of the page.
+
+                <h4>How can I look up for information about a car?</h4>
+                <p>For detailed information, you can click on the photo of the car to view other photos,
+                    or click on the name of the car to find out more about the characteristics of the car.</p>
+
+                <h4>Can I make an order a month ahead</h4>
+                <p>Yes, you can book a month in advance. But at the same time, the duration of your rental should be more than 170 hours.
+                    When booking, you will be required to pay 30% of the total amount of the order.</p>
+
+                <h4>Do you have other types of cars?</h4>
+                <p>No, all cars are shown on the site. We are working to ensure that our fleet is replenished weekly</p>
+
+                <h4>Will i have an insurance for rented car?</h4>
+                <p>Yes, by default you will have basic insurance. If you wish, you can purchase double-sided insurance for an additional fee.</p>
+
+                <h4>Can i extend the rental period after receiving the car?</h4>
+                <p>Yes, you can extend the rental period, but you must notify about it 24 hours before the end of the vehicle rental</p>
+
+                <h4>Can someone other than me drive the rental car?</h4>
+                <p>No, only the client who has provided his driver's license and other data to LEZGO is entitled to drive our vehicle.
+                    Other drivers can be added if they provide the required documents.</p>
+
+                <h4>What is the minimum rental period?</h4>
+                <p>The minimum rental period for all our vehicles is 24 hours.
+                    We also offer customized car rental plans to satisfy those customers looking for long term solutions.</p>
+
+                <h4>What are the basic requirements to hire a car</h4>
+                <p>All renters must be over 21 years of age and have a driver's license at least 6 months old.</p>
+            </div>
+
+            <div class="question">
+                <h1>Contact us</h1>
+                <form class="row g-3 needs-validation" novalidate>
+                  <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="validationCustom02" class="form-label">Phone</label>
+                    <input type="tel" class="form-control" id="validationCustom02" value="0000000000" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="validationCustomUsername" class="form-label">Username</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text" id="inputGroupPrepend">@</span>
+                      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                      <div class="invalid-feedback">
+                        Please write a username.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="validationCustom03" class="form-label">A message??</label>
+                    <input type="text" class="form-control" id="validationCustom03" value="Message" required>
+                    <div class="invalid-feedback">
+                      Please write, what about you want to contact us
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="validationCustom04" class="form-label">City</label>
+                    <select class="form-select" id="validationCustom04" required>
+                      <option value="" disabled selected>Choose your city</option>
+                        <option value="1">Almaty</option>
+                        <option value="2">Nur-Sultan</option>
+                        <option value="3">Rome</option>
+                        <option value="4">Abu Dhabi</option>
+                        <option value="5">Tashkent</option>
+                        <option value="6">Istanbul</option>
+                        <option value="7">Moscow</option>
+                        <option value="8">Vienna</option>
+                        <option value="9">Berlin</option>
+                        <option value="10">Hamburg</option>
+                        <option value="11">Stockholm</option>
+                        <option value="12">Warsaw</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid city.
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <label for="validationCustom05" class="form-label">Zip</label>
+                    <input type="text" class="form-control" id="validationCustom05" required>
+                    <div class="invalid-feedback">
+                      Please provide a valid zip.
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                      <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                      </label>
+                      <div class="invalid-feedback">
+                        You must agree before submitting.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}

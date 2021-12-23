@@ -1,0 +1,93 @@
+body{
+	margin: 0;
+}
+
+.wrapper{
+	background:
+	radial-gradient(black 15%, transparent 16%) 0 0,
+	radial-gradient(black 15%, transparent 16%) 8px 8px,
+	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+	background-color:#282828;
+	background-size:16px 16px;
+	margin: 0;
+	font-family: 'Arial', cursive;
+}
+
+.container{
+	width: auto;
+	margin: 0 20%;
+	padding: 0;
+}
+
+
+
+.infohead{
+	width: 100%;
+}
+
+.infohead h1{
+	margin: 0;
+	padding-top: 5%;
+	color: white;
+	padding-bottom: 5%;
+	font-size: 48px;
+	text-align: center;
+}
+
+.headphoto{
+	width: inherit;
+	border: 1px solid grey;
+	box-sizing: border-box;
+	padding: 1%;
+}
+
+.extraphoto{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.extraphoto img{
+	width: 47.5%;
+	padding: 1%;
+	border: 1px solid grey;
+}
+
+
+.info{
+
+}
+
+.info h2{
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 36px;
+}
+
+.info ul{
+	list-style-type: none;
+	margin-bottom: 0;
+}
+
+.info ul li{
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid grey;
+}
+
+.info ul li span{
+	padding: 2% 0;
+}
+
+.span1{
+	font-size: 24px;
+	color: white;
+	text-transform: uppercase;
+}
+
+.span2{
+	font-size: 20px;
+	color: #DCDCDC;
+}
